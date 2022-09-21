@@ -20,15 +20,15 @@ jobs:
       - run: inotifywait -mr /home/runner/work --format '%T;%w;%f;%e' --timefmt %T -o /home/runner/test.csv & echo "basak"
       - run: cat /home/runner/test.csv
       
-      - run: touch starting_10
+      - run: touch starting_a_10
       - uses: actions/checkout@v3
-      - run: touch starting_11
+      - run: touch starting_a_11
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
           java-version: '8'
           distribution: 'adopt'
-      - run: touch starting_16
+      - run: touch starting_a_16
       - name: Build modules
         run: gradle clean build
         
