@@ -61,7 +61,7 @@ jobs:
           git config --global user.name 'UT-SE-Research'
           git config --global user.email '${{ secrets.EMAIL }}'
           git add .
-          git commit -m '${{ GITHUB_SERVER_URL }}/GradleTestCI/commit/${{ GITHUB_SHA }}'
+          git commit -m '${{ github.GITHUB_SERVER_URL }}/GradleTestCI/commit/${{ github.GITHUB_SHA }}'
           while ! git push -f origin 1677088170-259e146; do
             git pull --rebase origin 1677088170-259e146
             sleep $((RANDOM % 5 + 1))
