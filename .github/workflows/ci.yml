@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: Pushes analysis to another repository
         if: always()
-        working-directory: GradleTestCI
         run: |
           env
           echo $GITHUB_SERVER_URL + "/" $GITHUB_REPOSITORY + "/commit/" + $GITHUB_WORKFLOW_SHA
