@@ -11,4 +11,4 @@ jobs:
         if: always()
         run: |
           env
-          echo $GITHUB_SERVER_URL + "/" $GITHUB_REPOSITORY + "/commit/" + $GITHUB_WORKFLOW_SHA
+          echo '$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_WORKFLOW_SHA'
