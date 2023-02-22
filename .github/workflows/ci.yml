@@ -10,5 +10,5 @@ jobs:
       - name: Pushes analysis to another repository
         if: always()
         run: |
-          env
-          echo '$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_WORKFLOW_SHA'
+          commit_message=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_WORKFLOW_SHA
+          echo $commit_message
